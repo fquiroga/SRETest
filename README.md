@@ -1,4 +1,4 @@
-#BADSEC User Retrieval Script
+# BADSEC User Retrieval Script
 
 This script retrieves a list of users from the BADSEC server.
 Usage
@@ -12,7 +12,7 @@ Arguments
 
 --base_url: The base URL of the BADSEC server. Default is http://localhost:8888.
 --max_retries: The maximum number of retries for each request. Default is 2.
-##How it works
+## How it works
 
     The script first calls the /auth endpoint to get an authentication token.
     It then calculates a checksum using the token and the request path (/users).
@@ -20,7 +20,7 @@ Arguments
     If any of these operations fail, the script retries them up to MAX_RETRIES times, waiting for 1 second between each attempt.
     The script prints the list of users to stdout in JSON format and logs any error messages to stderr. It also exits with a non-zero status code if it fails to retrieve the user list.
 
-##Requirements
+## Requirements
 
 Python 3 and the requests library are required to run this script.
 
