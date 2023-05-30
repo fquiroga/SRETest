@@ -14,15 +14,19 @@ Arguments
 --max_retries: The maximum number of retries for each request. Default is 2.
 ## How it works
 
--The script first calls the /auth endpoint to get an authentication token.
--It then calculates a checksum using the token and the request path (/users).
--It sends a GET request to the /users endpoint, including the checksum in the X-Request-Checksum header.
--If any of these operations fail, the script retries them up to MAX_RETRIES times, waiting for 1 second between each attempt.
--The script prints the list of users to stdout in JSON format and logs any error messages to stderr. It also exits with a non-zero status code if it fails to retrieve the user list.
+1. The script first calls the /auth endpoint to get an authentication token.
+
+2. It then calculates a checksum using the token and the request path (/users).
+
+3. It sends a GET request to the /users endpoint, including the checksum in the X-Request-Checksum header.
+
+4. If any of these operations fail, the script retries them up to MAX_RETRIES times, waiting for 1 second between each attempt.
+
+5. The script prints the list of users to stdout in JSON format and logs any error messages to stderr. It also exits with a non-zero status code if it fails to retrieve the user list.
 
 ## Requirements
 
-Python 3 and the requests library are required to run this script.
+***Python 3 and the requests library are required to run this script.***
 
 You can install requests using pip from command line:
 
