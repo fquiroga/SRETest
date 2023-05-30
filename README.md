@@ -14,11 +14,11 @@ Arguments
 --max_retries: The maximum number of retries for each request. Default is 2.
 ## How it works
 
-    The script first calls the /auth endpoint to get an authentication token.
-    It then calculates a checksum using the token and the request path (/users).
-    It sends a GET request to the /users endpoint, including the checksum in the X-Request-Checksum header.
-    If any of these operations fail, the script retries them up to MAX_RETRIES times, waiting for 1 second between each attempt.
-    The script prints the list of users to stdout in JSON format and logs any error messages to stderr. It also exits with a non-zero status code if it fails to retrieve the user list.
+-The script first calls the /auth endpoint to get an authentication token.
+-It then calculates a checksum using the token and the request path (/users).
+-It sends a GET request to the /users endpoint, including the checksum in the X-Request-Checksum header.
+-If any of these operations fail, the script retries them up to MAX_RETRIES times, waiting for 1 second between each attempt.
+-The script prints the list of users to stdout in JSON format and logs any error messages to stderr. It also exits with a non-zero status code if it fails to retrieve the user list.
 
 ## Requirements
 
