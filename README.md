@@ -1,12 +1,14 @@
-###BADSEC User Retrieval Script
+#BADSEC User Retrieval Script
 
 This script retrieves a list of users from the BADSEC server.
 Usage
 
 Run the script from the command line with optional arguments:
 
-'''python badsec_users.py [--base_url BASE_URL] [--max_retries MAX_RETRIES]
+```
+python badsec_users.py [--base_url BASE_URL] [--max_retries MAX_RETRIES]
 Arguments
+```
 
 --base_url: The base URL of the BADSEC server. Default is http://localhost:8888.
 --max_retries: The maximum number of retries for each request. Default is 2.
@@ -22,9 +24,11 @@ Arguments
 
 Python 3 and the requests library are required to run this script.
 
-You can install requests using pip:
+You can install requests using pip from command line:
 
-'''pip install requests
+```
+pip install requests
+```
 
 If you don't have Python installed, you can download it from the official Python website (https://www.python.org/). Make sure to choose the appropriate version for your operating system.
 Unpacking
